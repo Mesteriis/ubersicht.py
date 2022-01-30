@@ -23,8 +23,7 @@ def widgets():
 
 def kill():
     """kill Übersicht.app process"""
-    _pid = pid()
-    if _pid:
+    if _pid := pid():
         os.system("kill -9 %s &> /dev/null" % _pid)
 
 
